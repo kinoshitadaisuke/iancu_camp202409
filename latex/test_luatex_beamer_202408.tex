@@ -1,0 +1,55 @@
+\documentclass[t]{beamer}
+
+% Time-stamp: <2024/08/01 19:56:41 (UT+8) daisuke>
+
+%
+% preamble
+%
+
+\title{\bf Making a presentation slide using Lua\TeX}
+\author{Kinoshita Daisuke}
+\date{August 2024}
+
+%
+% main body of document
+%
+\begin{document}
+
+% title page
+\begin{frame}
+ \titlepage
+\end{frame}
+
+% new page
+\begin{frame}{Making a presentation slide using Lua\TeX}
+ \begin{itemize}
+  \item Presentation slides can be produced easily by Beamer.
+  \item To learn about Beamer, visit following web page.
+	\begin{itemize}
+	 \item Beamer: https://ctan.org/pkg/beamer
+	\end{itemize}
+  \item A new slide page can be created by using {\tt frame}
+	environment.
+  \item Mathematical formulae can be used.
+  \item The absolute magnitude of an object $M$ can be calculated by
+	\[
+	M = m - 5 \log_{10} d + 5,
+	\]
+	where $m$ is apparent magnitude and $d$ is distance in parsec.
+  \item An example of a table.
+	\begin{center}
+	 \begin{tabular}{|l|r|r|r|l|}
+	  \hline
+	  Star & App. Mag. & Abs. Mag. & Dist. & Type \\
+	  \hline \hline
+	  Sun & $-26.74$ & $+4.83$ & 1 au & G2V \\
+	  Sirius & $-1.46$ & $+1.43$ & 2.67 pc & A0V \\
+	  Vega & $+0.03$ & $+0.58$ & 7.68 pc & A0V \\
+	  Betelgeuse & $+0.50$ & $-5.85$ & 168 pc & M1I \\
+	  \hline
+	 \end{tabular}
+	\end{center}
+ \end{itemize}
+\end{frame}
+
+\end{document}
