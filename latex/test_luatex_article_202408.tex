@@ -1,0 +1,180 @@
+\documentclass{article}
+
+% Time-stamp: <2024/08/01 21:55:28 (UT+8) daisuke>
+
+%
+% preamble of the document
+%
+
+% loading graphicx package
+\usepackage{graphicx}
+
+% loading url package
+\usepackage{url}
+
+% title
+\title{\bf Making a PDF file using Lua\TeX}
+% author
+\author{{\sc Kinoshita} Daisuke}
+% date
+\date{01 August 2024}
+
+%
+% main body of the document
+%
+\begin{document}
+
+% making title of document
+\maketitle
+
+% abstract
+\begin{abstract}
+ This is a sample \LaTeX source file for producing a PDF file using
+ Lua\TeX. For typesetting of documents for natural science, \LaTeX is
+ extremely useful. We can handle mathematical formulae easily using
+ \LaTeX.
+\end{abstract}
+
+ % first section of document
+ \section{Introduction}
+
+ \LaTeX is the de-facto standard typesetting system for Unix-like
+ operating systems. To learn about \LaTeX, visit following web page.
+
+ \begin{itemize}
+  \item \url{https://www.latex-project.org/}
+ \end{itemize}
+
+ % second section of document
+ \section{Mathematical formulae}
+
+ Here are some examples of mathematical formulae.
+
+ \begin{eqnarray}
+  f(x) &=& a x^2 + b x + c \\
+  (a+b) (a-b) &=& a^2 - b^2 \\
+  (1+x)^n &\sim& 1 + nx \\
+  \sin (a + b) &=& \sin a \cos b + \cos a \sin b \\
+  M + m &=& \frac{4 \pi^2}{G} \frac{a^3}{P^2} \\
+  m_1 - m_2 &=& -2.5 \log_{10} \frac{F_1}{F_2} \\
+  \vec{a} \cdot \vec{b} &=& a_x b_x + a_y b_y + a_z b_z \\
+  \frac{dy}{dx} &=& -ky \\
+  \nabla &=& \hat{x} \frac{\partial}{\partial x} 
+   + \hat{y} \frac{\partial}{\partial y}
+   + \hat{z} \frac{\partial}{\partial z} \\
+  \nabla \times \vec{E} &=& - \frac{\partial \vec{B}}{\partial t} \\
+  \int f(x) g'(x) dx &=& f(x) g(x) - \int f'(x) g(x) dx \\
+  \int_{-\infty}^{+\infty} e^{-x^2} dx &=& \sqrt{\pi} \\
+  f(x) &=& f(0) + f'(0) + \frac{f''(0)}{2!} +
+   \frac{f^{(3)}(0)}{3!} + \cdots + \frac{f^{(n)}(0)}{n!} +
+   \cdots \nonumber \\
+  &=& \sum_{k=0}^{\infty} \frac{f^{(k)}(x=0)}{k!} \\
+  \left (
+  \begin{array}{cc}
+   a & b \\
+   c & d
+  \end{array}
+  \right )
+  \left (
+  \begin{array}{cc}
+   e & f \\
+   g & h
+  \end{array}
+  \right )
+  &=&
+  \left (
+  \begin{array}{cc}
+   ae + bg & af + bh \\
+   ce + dg & cf + dh
+  \end{array}
+  \right )
+ \end{eqnarray}
+
+ % third section of document
+ \section{Table}
+
+ Here is an example of making table. The {\tt tabular} environment can
+ be used to make a table.
+
+ \begin{center}
+  \begin{tabular}{|l|r|r|r|l|}
+   \hline
+   Star & App. Mag. & Abs. Mag. & Distance & Spec. Type \\
+   \hline \hline
+   Sun & $-26.74$ & $+4.83$ & 1 au & G2V \\
+   Sirius & $-1.46$ & $+1.43$ & 2.67 pc & A0V \\
+   Vega & $+0.03$ & $+0.58$ & 7.68 pc & A0V \\
+   Betelgeuse & $+0.50$ & $-5.85$ & 168 pc & M1I \\
+   \hline
+  \end{tabular}
+ \end{center}
+
+ % fourth section of document
+ \section{Including an image}
+
+ Here is an example of including an image. For including an image, we
+ first need to load {\tt graphicx} package, and then use {\tt
+ \textbackslash includegraphics} command. (Fig. \ref{m1_jwst})
+
+ \begin{figure}[htbp]
+  \begin{center}
+   \scalebox{0.1}{\includegraphics{STScI-01J04B8WBQTA55C2M3NPYBARD1.png}}
+  \end{center}
+  \caption{JWST image of the Crab Nebula.}
+  \label{m1_jwst}
+ \end{figure}
+
+ % fifth section of document
+ \section{For your further reading}
+
+ For your further reading about \LaTeX, try following.
+
+ \begin{itemize}
+  \item ``\LaTeX Sophisticated professional typesetting for business and
+	academic publishing''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/latex-brochure/brochure.pdf}
+	\end{itemize}
+  \item ``The \LaTeX document preparation system''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/latex-course/LaTeX-Course.pdf}
+	\end{itemize}
+  \item ``Essential \LaTeX''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/latex-essential/ess2e.pdf}
+	\end{itemize}
+  \item ``\LaTeX for Undergraduates''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/latex-for-undergraduates/LaTeX_for_Undergraduates.pdf}
+	\end{itemize}
+  \item ``A Simplified Introduction to \LaTeX''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/simplified-latex/simplified-intro.pdf}
+	\end{itemize}
+  \item ``\TeX in a Nutshell''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/tex-nutshell/tex-nutshell.pdf}
+	\end{itemize}
+  \item ``An overview of TEX, its children and their friends $\ldots$''
+       \begin{itemize}
+	\item \url{https://tug.ctan.org/info/tex-overview/tex-overview.pdf}
+       \end{itemize}
+  \item ``A Gentle Introduction to \TeX''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/gentle/gentle.pdf}
+	\end{itemize}
+  \item ``Short Math Guide for \LaTeX''
+       \begin{itemize}
+	\item \url{https://tug.ctan.org/info/short-math-guide/short-math-guide.pdf}
+       \end{itemize}
+  \item ``The Comprehensive \LaTeX Symbol List''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
+	\end{itemize}
+  \item ``Math Trip''
+	\begin{itemize}
+	 \item \url{https://tug.ctan.org/info/mathtrip/MathTrip_lualatex.pdf}
+	\end{itemize}
+ \end{itemize}
+
+\end{document}
