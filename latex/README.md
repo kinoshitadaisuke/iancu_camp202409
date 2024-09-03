@@ -1,5 +1,7 @@
 # LaTeX
 
+Time-stamp: <2024/09/03 13:50:04 (UT+8) daisuke>
+
 If you have LaTeX installed on your own computer, try following
 
 ```
